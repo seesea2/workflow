@@ -4,9 +4,8 @@ on: [push]
 
 jobs:
   Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
+    runs-on: alpine
     steps:
-      - uses: actions/checkout@v2
       - name: write a message
         run: |
           echo this demo file show a
