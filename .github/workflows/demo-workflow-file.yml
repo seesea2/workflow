@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x.x
-        cache: npm
+          cache: npm
           
       - name: Install
         run: npm ci
