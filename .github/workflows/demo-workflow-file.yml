@@ -1,8 +1,9 @@
+name: hello demo
+
 on: [push]
 
 jobs:
   build:
-  name: hello demo
   runs-on: ubuntu-latest
   steps:
   - uses: actions/checkout@v2
