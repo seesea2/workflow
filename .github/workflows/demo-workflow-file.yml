@@ -1,16 +1,22 @@
-name: hello demo
-run-name: ${{ github.actor }} is learning github
+name: 'Link Checker: All English' 
 
-on: [push]
+on:
+  push:
+    branch:
+      - main
 
 jobs:
-  check-bats-version:
+  check-links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-      - run: npm install -g bats
-      - run: bats -v
+      - name: Checkout
+        uses: actions/checkout@v3
 
+      - name: Steup node
+        uses: actions/setup-node@v3
+        with:
+          node-version:18.x.x
+        cache: npm
+          
+      - name: Install
+        run: npm ci
